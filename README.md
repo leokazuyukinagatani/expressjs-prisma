@@ -1,40 +1,127 @@
----
-title: ExpressJS Prisma
-description: An ExpressJS server that uses Prisma to connect to a PostgreSQL database
-tags:
-  - express
-  - postgresql
-  - prisma
-  - typescript
----
+[Tecnologias](#-stack-utilizada) |
+[Como Executar](#-rodando-localmente) |
+[Projeto](#-stack-utilizada) |
+[Testes](#-rodando-os-testes) |
+[Documentação](#-documentação-da-api)  |
+[Next Level](#-melhorias) 
 
-# ExpressJS Prisma Example
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
-This is an [ExpressJS](https://expressjs.com/) REST API that uses [Prisma](https://www.prisma.io/) to connect to a Postgres database and CRUD todos.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/LqCw_O)
+# Título do Projeto
 
-## ✨ Features
+Uma breve descrição sobre o que esse projeto faz e para quem ele é
 
-- Prisma
-- Express
-- Postgres
-- TypeScript
 
-## 💁‍♀️ How to use
+## Funcionalidades
+- Listagem de games com contagem de anúncios
+- Criação de novo anúncio
+- Listagem de anúncios por game
+- Buscar discord pelo ID do anúncio
 
-- Install dependencies `yarn`
-- [Provision a Postgres container on Railway](https://dev.new)
-- Connect to your Railway project with `railway link`
-- Migrate the database `railway run yarn migrate:dev`
-- Run the Server app `railway run yarn dev`
+## Stack utilizada
 
-## 📝 Notes
+**Front-end:** React, Redux, TailwindCSS
 
-This is a simple REST API for todo items. The available routes are
+**Back-end:** Node, Express
 
-- `GET /todos` gets all todos
-- `POST /todos` creates a new using `text` in the JSON body
-- `GET /todos/:id` gets a todo by id
-- `PUT /todos/:id` updates a todo by id
-- `DELETE /todos/:id` deletes a todo by id
+## Roadmap
+  - Setup(Fastify, Prisma)
+  - Criação do Banco de dados
+  - Criação do Diagram ERD
+  - Criação da função de contagem dos bolões
+  - Estrutura do banco de dados
+  - Criação da função de criar um bolão
+  - Criação da função de contagem de usuários
+  - Criação da função de contagem de palpites
+
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone https://link-para-o-projeto
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd my-project
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  npm run dev
+```
+
+
+## Documentação da API
+
+#### Retorna todos os itens
+
+```http
+  GET /api/items
+```
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `api_key` | `string` | **Obrigatório**. A chave da sua API |
+
+#### Retorna um item
+
+```http
+  GET /api/items/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
+
+#### add(num1, num2)
+
+Recebe dois números e retorna a sua soma.
+
+
+## Entidades
+
+![Logo](./prisma/ERD.svg)
+
+
+## Variáveis de Ambiente
+
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+
+`API_KEY`
+
+`ANOTHER_API_KEY`
+
+
+## Rodando os testes
+
+Para rodar os testes, rode o seguinte comando
+
+```bash
+  npm run test
+```
+
+
+## Melhorias
+
+Que melhorias você fez no seu código? Ex: refatorações, melhorias de performance, acessibilidade, etc
+
+
+## Aprendizados
+
+O que você aprendeu construindo esse projeto? Quais desafios você enfrentou e como você superou-os?
+
+
+## Suporte
+
+Para suporte, mande um email para fake@fake.com ou entre em nosso canal do Slack.
