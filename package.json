@@ -5,13 +5,9 @@
   "author": "Leo Kazuyuki Nagatani",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.ts",
-    "build": "yarn migrate:deploy && tsc",
-    "start": "node dist/index.js",
-    "migrate:dev": "prisma migrate dev",
-    "migrate:deploy": "prisma migrate deploy",
-    "migrate:status": "prisma migrate status",
-    "generate": "prisma generate"
+    "dev": "nodemon index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@fastify/cors": "^8.1.1",
